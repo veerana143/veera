@@ -1,4 +1,4 @@
-
+//this  program is  for covering  all args types
 #include <stdio.h>
 #include<pthread.h>
 void even_odd();
