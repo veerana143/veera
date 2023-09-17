@@ -1,19 +1,19 @@
 //this  program is  for covering  all args types
 #include <stdio.h>
 #include<pthread.h>
-void even_odd();
+void  even_odd();
 int prime();
 void name();
 int add();
-int  palindrome();
-int factorial();
+ //int  palindrome();//
+ //int factorial();
 static int n;                         //global variables                  //static global variables
 void main()
 {
     int x=20;
     int i,count=0,p,k;
     int n,r,sum=0,temp;
-    int fact,number;          //local variables                         //automatic variables
+//    int fact,number;          //local variables                         //automatic variables
     printf("enter a number\n");
     scanf("%d",&n);
     even_odd(n,&x);                           //with argument  without return
@@ -26,15 +26,14 @@ void main()
     k=add();                                 //without  argument   with return
    printf("k=%d\n",k); 
    printf("enter a number:");
-   scanf("%d",&n);
-   printf("enter the number");
-   scanf("%d",&n);
-   fact=factorial(number);
-   printf("factorial of %d is %d\n",number,fact);
+   scanf("%d",&n);  // printf("enter the number");
+   //scanf("%d",&n);
+  // fact=factorial(number);
+  // printf("factorial of %d is %d\n",number,fact);
 
    pthread_t  thread1,thread2;
-   pthread_create(&thread1,NULL,palindrome,n);
-   pthread_create(&thread2,NULL,factorial,n);
+   pthread_create(&thread1,NULL,even_odd,n);
+   pthread_create(&thread2,NULL,add,n);
 }
 void even_odd( int n,int* p)
  {
@@ -57,4 +56,20 @@ int add()
     return a+b;
     
 }
+int prime();
+extern int x;                             //extern keyword
 
+int prime(int n)
+{
+int i,count=0;                      //local variables
+for(i=1;i<=n;i++)
+{
+if(n%i==0)
+count++;
+}
+if(count==2)
+printf("prime\n");
+else
+printf("not prime\n");
+return n;
+}
