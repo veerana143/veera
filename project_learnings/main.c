@@ -22,6 +22,7 @@ case 2:str_prog_list();
 case 3:printf("implement later");
 
 case 4:datastructures();
+    break;
 default : printf("choose proper option from given list");
 }
 }
