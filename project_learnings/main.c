@@ -1,8 +1,6 @@
 
 #include<stdio.h>
-
-
-main()
+int main()
 {
 int n;
 printf("##################welcome to learnings tutorilas ################\n");
@@ -15,7 +13,7 @@ printf("selest below option which kind of programs\n \
 scanf("%d",&n);
 switch(n)
 {
-case 1:printf("not implemented yet");
+case 1:bitwise_operater();
 
 case 2:str_prog_list();
 

@@ -1,0 +1,61 @@
+ #include<stdio.h>
+char str[100];
+void string_length(char[]);
+void main()
+{
+    printf("enter a string\n");
+    scanf("%s",str);
+    string_length(str);
+
+}
+void string_length( char str1[])
+{
+     int i=0 ,count=0;
+     while(str1[i]!='\0')
+     {
+      i++;
+      count++;
+     }
+     printf("%d",count);
+}
+
+#include <stdio.h>
+char name1[20];
+char name2[20];
+void string_apend(char [],char[]);
+int main()  
+{  
+    
+     printf("Enter name1: ");  
+    scanf("%s",name1);  
+    printf("\nEnter name2: ");  
+    scanf("%s",name2); 
+    string_apend(name1,name2);
+}
+void string_apend(char name1[],char name2[])
+{
+    int i,j;
+
+ for(i=0;name1[i]!='\0';i++);   
+        
+    for(int j=0;name2[j]!='\0';j++)  
+    {     
+        name1[i]=name2[j];  
+        i++;  
+    } 
+
+name1='\0';
+printf("%s",name1);
+}
+
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+ printf("enter a string\n");
+ scanf("%s",str);
+    
+    s2 = copyString(s1);
+    printf("%s", s2);
+    return 0;
+}

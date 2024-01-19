@@ -95,7 +95,7 @@ void traverseList()
     }
 }
 
-linked_list()
+int linked_list()
 {
  printf("##################linked list related programs ################\n");
  printf("selest below option which kind of programs\n \
@@ -120,7 +120,7 @@ linked_list()
 
  }
 }
-datastructures()
+ int datastructures()
 {
 
 printf("##################datastrucures related programs ################\n");
@@ -147,7 +147,6 @@ case 4:printf("not implemented yet");
 default : printf("choose proper option");
      break;
 }
-
-
-
 }
+
+    
